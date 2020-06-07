@@ -1,0 +1,14 @@
+<div class="list-card">
+    <mat-card *ngFor="let book of (bookList$ | async)" class="card-book">
+        <div class="container-info-book">
+            <p class="titre-book">{{book.getTitle()}}</p>
+            <p>Autheur(s) : {{book.getAuthors()}}</p>
+            <p>Date : {{changeFormatDate(book.getPublishedDate())}}</p>
+        </div>
+        <div class="container-action">
+            <button mat-raised-button routerLink="/detailBook" routerLinkActive="active" (click)="setSelectBook(book)">Détails</button>
+            <button mat-raised-button color="primary" (click)="openDialogRent(book)" *ngIf="book.getRent() === null">Prêter</button>
+            <button mat-raised-button color="accent" (click)="openDialogRent(book)" *ngIf="book.getRent() !== null">Retourner</button>
+        </div>
+    </mat-card>
+</div>

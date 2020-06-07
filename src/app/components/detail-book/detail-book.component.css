@@ -1,0 +1,42 @@
+.container {
+    padding: 30px;
+}
+
+.info-book {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.rent {
+    padding: 5px 5px 10px 0;
+    width: calc(80% - 5px);
+    min-width: 300px;
+    width: 100%;
+}
+
+.thumbnail {
+    width: 20%;
+    min-width: 150px;
+    margin: auto;
+}
+
+.en-tete {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.en-tete>button {
+    width: 100px;
+    height: 50px;
+    margin: 0 0 auto;
+    align-items: flex-end;
+}
+
+.info-creation {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,25 @@
+<div *ngIf="(selectBook | async) as book" class="container">
+    <div class="en-tete">
+        <h1>{{book.getTitle()}}</h1>
+        <button mat-raised-button routerLink="/" routerLinkActive="active" color="accent">Retour</button>
+    </div>
+    <div class="info-creation">
+        <p>
+            Autheur(s) : {{book.getAuthors()}} -
+        </p>
+        <p>
+            Date : {{changeFormatDate(book.getPublishedDate())}} -
+        </p>
+        <p>
+            ISBN : {{book.getIsbn()}}
+        </p>
+    </div>
+
+    <p>{{book.getDescription()}}</p>
+    <div class="info-book">
+        <p class="rent">
+            <app-rent-book></app-rent-book>
+        </p>
+        <img [src]="book.getThumbnail()" class="thumbnail">
+    </div>
+</div>

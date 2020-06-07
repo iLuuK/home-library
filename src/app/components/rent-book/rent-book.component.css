@@ -1,0 +1,20 @@
+.form-rent {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.input {
+    width: calc(50% - 20px);
+    padding: 10px;
+    margin: 0 auto;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input>button {
+    margin: auto;
+    width: 200px;
+}

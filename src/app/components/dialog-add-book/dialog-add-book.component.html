@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Ajout d'un livre</h1>
+<div mat-dialog-content class="dialog-container">
+    <p>Quel est son code ISBN ?</p>
+    <mat-form-field [formGroup]="myForm">
+        <mat-label>Code ISBN (10-13)</mat-label>
+        <input matInput formControlName="isbn" maxlength="13" #isbn>
+        <mat-hint align="end">{{isbn.value.length}} / 13</mat-hint>
+    </mat-form-field>
+</div>
+<div mat-dialog-actions align="end">
+    <button mat-button (click)="closeDialog()">Annuler</button>
+    <button mat-button cdkFocusInitial (click)="addBook()">Ajouter</button>
+</div>
